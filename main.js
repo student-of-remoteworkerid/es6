@@ -1,11 +1,19 @@
 // ES5
-var myName = "BuildWith Angga";
-console.log(myName);
+/*
+var myCars = ['BMW', 'Mazda', 'Toyota'];
 
-myName = "BelajarKoding";
-console.log(myName);
+for (var i = 0; i < myCars.length; i++) {
+    console.log(myCars[i])
+}
+
+console.log(i);
+*/
 
 // ES6
-const myCar = "Lamborghini";
-myCar = "Pajero"
-console.log(myCar)
+const myCars = ['BMW', 'Mazda', 'Toyota'];
+
+for (let i = 0; i < myCars.length; i++) {
+    console.log(myCars[i])
+}
+
+// console.log(i);
