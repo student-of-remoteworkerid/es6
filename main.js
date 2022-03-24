@@ -1,19 +1,13 @@
+// ambil element
+const user_place = document.getElementById('user');
+
 // ES5
 /*
-var myCars = ['BMW', 'Mazda', 'Toyota'];
-
-for (var i = 0; i < myCars.length; i++) {
-    console.log(myCars[i])
-}
-
-console.log(i);
+const user_logged = "Tony";
+user_place.innerHTML = "Hi, " + user_logged + " Apa kabar?";
+console.log(user_logged);
 */
 
 // ES6
-const myCars = ['BMW', 'Mazda', 'Toyota'];
-
-for (let i = 0; i < myCars.length; i++) {
-    console.log(myCars[i])
-}
-
-// console.log(i);
+const user_logged = "Tony";
+user_place.innerHTML = `Hi, ${user_logged} Apa kabar?`;
