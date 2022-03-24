@@ -1,26 +1,21 @@
 // ambil element
-const cart_items = document.getElementById('cart');
+const skills_holder = document.getElementById('skills');
 
 // ES5
-/*
-function addProduct(name, category) {
-    return {
-        name: name,
-        category: category
-    }
-}
-
-var getProduct = addProduct("Iphone 11", "Gadget");
-console.log(getProduct)
-*/
 
 // ES6
-function addProduct(name, category) {
-    return {
-        name,
-        category
-    }
-}
+const yourSkills = ['Fullstack Developer', 'Backend Developer', 'Data Engineer', 'DevOps'];
 
-var getProduct = addProduct("Iphone 11", "Gadget");
-cart_items.innerHTML = `Product: ${getProduct.name} <br> Category: ${getProduct.category}`;
+
+// tambahkan item kepada array
+// yourSkills.push('Machine Learning');
+
+let parent = '<ul>';
+
+yourSkills.forEach((skill) => {
+    parent += '<li>' + skill + '</li>';
+    console.log(`${skill}`);
+});
+
+parent += '<ul>';
+skills_holder.innerHTML = parent;
