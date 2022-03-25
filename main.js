@@ -6,16 +6,21 @@ const skills_holder = document.getElementById('skills');
 // ES6
 const yourSkills = ['Fullstack Developer', 'Backend Developer', 'Data Engineer', 'DevOps'];
 
-
-// tambahkan item kepada array
-// yourSkills.push('Machine Learning');
-
-let parent = '<ul>';
-
+// Map
 yourSkills.forEach((skill) => {
     parent += '<li>' + skill + '</li>';
     console.log(`${skill}`);
 });
 
-parent += '<ul>';
-skills_holder.innerHTML = parent;
+const printSkills = yourSkills.map(skill => {
+    return skill;
+});
+
+skills_holder.innerHTML = printSkills;
+
+// filter data
+const myPrimarySkill = yourSkills.filter(skill => {
+    return skill !== "Fullstack Developer";
+});
+
+console.log(myPrimarySkill);
