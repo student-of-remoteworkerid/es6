@@ -1,26 +1,21 @@
 // ambil element
-const skills_holder = document.getElementById('skills');
+const data = document.getElementById('data');
 
 // ES5
 
 // ES6
-const yourSkills = ['Fullstack Developer', 'Backend Developer', 'Data Engineer', 'DevOps'];
+// modul untuk member class
+class Siswa {
+    constructor(username, password, name_kelas) {
+        this.username = username;
+        this.password = password;
+        this.name_kelas = name_kelas;
+    }
 
-// Map
-yourSkills.forEach((skill) => {
-    parent += '<li>' + skill + '</li>';
-    console.log(`${skill}`);
-});
+    join() {
+        console.log(this.username + ' telah bergabung pada kelas ' + this.name_kelas);
+    }
+}
 
-const printSkills = yourSkills.map(skill => {
-    return skill;
-});
-
-skills_holder.innerHTML = printSkills;
-
-// filter data
-const myPrimarySkill = yourSkills.filter(skill => {
-    return skill === "Backend Developer";
-});
-
-skills_holder.innerHTML = myPrimarySkill
+let addSiswa = new Siswa('bwastudio', '230fsdf', 'Web Design');
+addSiswa.join();
