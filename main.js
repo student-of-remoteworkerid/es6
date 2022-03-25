@@ -20,7 +20,7 @@ skills_holder.innerHTML = printSkills;
 
 // filter data
 const myPrimarySkill = yourSkills.filter(skill => {
-    return skill !== "Fullstack Developer";
+    return skill === "Backend Developer";
 });
 
-console.log(myPrimarySkill);
+skills_holder.innerHTML = myPrimarySkill
